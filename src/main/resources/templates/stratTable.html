@@ -6,5 +6,28 @@
 </head>
 <body>
     <h3>Strategy Table:</h3>
+    <table>
+        <caption>Strategy Used for This Trial</caption>
+        <tr>
+            <th> </th>
+            <th colspan="10">Dealer's Up Card</th>
+        </tr>
+        <tr>
+            <th>Hand</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>10</th>
+            <th>A</th>
+        </tr>
+        <tr th:each="row : ${table.basicTable}">
+            <td th:each="cell : ${row}" th:text="${cell}"></td>
+        </tr>
+    </table>
 </body>
 </html>
