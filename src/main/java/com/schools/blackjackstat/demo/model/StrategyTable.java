@@ -1,6 +1,6 @@
 package com.schools.blackjackstat.demo.model;
 
-public class strategyTable {
+public class StrategyTable {
     private String[][] basicTable = new String[23][10];
     private String[][] altTable = new String[23][10];
 
