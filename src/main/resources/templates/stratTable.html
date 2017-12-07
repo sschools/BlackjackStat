@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Set Strategy</title>
+    <link href="/styles.css" rel="stylesheet"/>
 </head>
 <body>
     <h3>Strategy Table:</h3>
@@ -25,8 +26,8 @@
             <th>10</th>
             <th>A</th>
         </tr>
-        <tr th:each="row : ${table.basicTable}">
-            <td th:each="cell : ${row}" th:text="${cell}"></td>
+        <tr th:each="row, rowStat : ${table.basicTable}">
+            <td th:each="cell, colStat : ${row}" th:text="|${cell} ${rowStat.index} ${colStat.index}"></td>
         </tr>
     </table>
 </body>

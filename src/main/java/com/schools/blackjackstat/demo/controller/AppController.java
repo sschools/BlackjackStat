@@ -17,6 +17,7 @@ public class AppController {
     public String stratPage(Model model) {
         StrategyTable playStrategy = new StrategyTable();
         playStrategy.setBasicTable();
+        playStrategy.setAltTable();
         model.addAttribute("table", playStrategy);
         return "stratTable";
     }
