@@ -27,7 +27,13 @@
             <th>A</th>
         </tr>
         <tr th:each="row, rowStat : ${table.basicTable}">
-            <td th:each="cell, colStat : ${row}" th:text="|${cell} ${rowStat.index} ${colStat.index}"></td>
+            <td th:each="cell, colStat : ${row}">
+                <span th:if="${cell} == ${table.altTable[rowStat.index][colStat.index]}" th:text="${cell}"></span>
+                <select th:unless="${cell} == ${table.altTable[rowStat.index][colStat.index]}">
+                    <option th:text="${cell}"></option>
+                    <option th:text="${table.altTable[rowStat.index][colStat.index]}"></option>
+                </select>
+            </td>
         </tr>
     </table>
 </body>
